@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#27ae60;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width:.7rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#fff;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--green);
+}
+
+body{
+    background:rgb(255, 255, 255);
+}
+
+section{
+    padding:2rem 9%;
+    min-height: 98vh;
+}
+.home #particles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.home::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.home .content{
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+.home .content img{
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    border: 8px solid greenyellow;
+    object-fit: cover;
+}
+
+.home .content h3{
+    font-size: 4rem;
+    color:#222;
+    text-transform: uppercase;
+}
+
+.home .content h3 span{
+    color:var(--green);
+    text-transform: uppercase;
+}
+
+.home .content p{
+    color:#222;
+    font-size: 2.5rem;
+    line-height: 2;
+}
+
+video{
+    height: 50vh;
+    border: 8px solid greenyellow;
+    background-color: #161616;
+    color: greenyellow;
+}
+
+
+
+.loader-container.fade-out{
+    top:-110%;
+    opacity:0;
+}
+
+.loader-container{
+    position: fixed;
+    top:0; left:0;
+    height:100%; 
+    width:100%;
+    z-index: 100;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader1{
+    margin: 2rem 0;
+    width: 5rem;
+    z-index: 10000;
+    height: 5rem;
+    border-radius: 50%;
+    border: 7px solid;
+    border-color: #ec39ec #333 #333;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to{ transform: rotate(-360deg);}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.curus{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+.curus2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #222;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: color 8s infinite;
+}
+@keyframes color {
+    0%{background: #27ae60;}
+    100%{background: #ec39ec;}
+}
